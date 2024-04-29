@@ -122,7 +122,7 @@ static std::unique_ptr<PrototypeAST> ParsePrototype() {
 	if (CurTok != tok_identifier)
 		return LogErrorP("Expected function name in prototype");
 	std::string FnName = IdentifierStr;
-	getNextToken;
+	getNextToken();
 
 	if (CurTok != '(')
 		return LogErrorP("Expected '(' in prototype");
