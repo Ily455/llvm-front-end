@@ -1,4 +1,4 @@
-#include"parser.cpp"
+#include"codegen.cpp"
 
 static void InitializeModule() {
 	TheContext = std::make_unique<LLVMContext>();

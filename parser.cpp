@@ -1,7 +1,5 @@
 #include"astnodes.cpp"
 #include <map>
-/*#include"lexer.cpp"*/
-
 
 static int CurTok;
 static int getNextToken() {
@@ -9,7 +7,7 @@ static int getNextToken() {
 }
 
 std::unique_ptr<ExprAST> LogError(const char *Str) {
-	fprintf(stderr, "Error:%s /n", Str);
+	fprintf(stderr, "Error:%s \n", Str);
 	return nullptr;
 }
 
@@ -116,7 +114,6 @@ static std::unique_ptr<ExprAST> ParseExpression() {
 
 	return ParseBinOpRHS(0, std::move(LHS));
 }
-
 
 static std::unique_ptr<PrototypeAST> ParsePrototype() {
 	if (CurTok != tok_identifier)
