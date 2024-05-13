@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cctype>
 using namespace std;
+using namespace llvm;
 
 enum Token {
 	tok_eof = -1,
